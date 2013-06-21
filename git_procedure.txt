@@ -1,0 +1,22 @@
+git status
+git pull
+
+
+git co -b <mybranch>
+
+edit/commit/edit/commit locally
+
+git co master
+git pull
+git co <mybranch>
+git rebase master
+
+>>>> resolve any merge conflicts
+  git rebase --continue
+
+git co master
+git merge <mybranch>
+git push
+git co <mybranch>
+return to edit/commit locally and iterate
+
