@@ -1,3 +1,5 @@
+#\ --host 0.0.0.0
+
 # Require config/environment.rb
 require ::File.expand_path('../config/environment',  __FILE__)
 
