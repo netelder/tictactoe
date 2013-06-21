@@ -7,3 +7,25 @@
 th {
   text-align: left;
 }
+
+table {
+  margin-left: 50px;
+  box-shadow: 10px 10px 5px gray;
+}
+
+.empty {
+  background-color: yellow;
+}
+
+.X {
+  background-image:url("../images/X.jpeg");
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+}
+
+.O {
+  background-image:url("../images/O.jpeg");
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+}
+
