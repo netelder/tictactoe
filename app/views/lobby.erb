@@ -3,10 +3,13 @@
 
 
 <h2>Waiting For Game</h2>
-<ul id="waiting_palyers">
-  <li></li>
+<ul id="waiting_players">
+  <% waiting_players.each do |game| %>
+    <li><a href = "/game/start/<%= game.id %>/user/<%= @currentuser.id %>">Play with <%= User.find(game.user_1_id).username %>!</a></li>
+  <% end %>
 </ul>
 
 
 <button id="new_game" value="start_game">Start a Game</button>
+<button id="logout"> <a href="/logout">Logout</a></button>
 <script>var userId = <%= @currentuser.id %></script>

@@ -11,6 +11,9 @@ class Game < ActiveRecord::Base
     last_player = user_id
   end
 
+  def two_players?
+    !user_1.nil? && !user_2.nil?
+  end
 end
 
 # #In Javascript, we have to send in the ID of the square

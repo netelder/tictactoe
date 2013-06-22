@@ -1,20 +1,15 @@
 $(document).ready(function() {
 
-  console.log(userId);
-
-$('#new_game').on('click', function(e){
-  e.preventDefault();
-  $.ajax({
-    type:  "POST",
-    url:  "/game/start/" + userId
-  }).done(function (response){
-  console.log(response);
-$("#waiting_players li").append('<li><a href="game/' + response.game_id + response.username + '>response.username</a></li>');
+  $('#new_game').on('click', function(e){
+    e.preventDefault();
+    $.ajax({
+      type:  "POST",
+      url:  "/game/start/" + userId
+    }).done(function (response){
+      var link = "/game/" + response.gameId + "/user/"+response.userId;
+      $("#waiting_players").append('<li><a href=' + link + '>'+ response.userName + '</a></li>');
     });
   });
-});
-
-
 
   $('#board').on('click', 'td', function (e) {
     var cell = e.target;

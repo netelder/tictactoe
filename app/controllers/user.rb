@@ -4,7 +4,17 @@ post '/login' do
   erb :lobby
 end
 
+get '/lobby' do
+  @currentuser = currentuser
+  erb :lobby
+end
+
 get '/logout' do
    session.clear
   redirect '/'
+end
+
+get '/profile' do
+  @user = currentuser
+  erb :profile
 end
