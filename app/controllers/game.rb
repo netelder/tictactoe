@@ -1,5 +1,6 @@
 get '/game/start' do
 #empty game board
+  @user_id = currentuser.id
   erb :play
 end
 

@@ -1,6 +1,6 @@
 get '/' do
   if currentuser
-    erb :lobby
+    erb :play
   else
     erb :index
   end
