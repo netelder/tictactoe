@@ -1,16 +1,19 @@
 $(document).ready(function() {
-$('#new_game').on('submit', function(e){
+
+  console.log(userId);
+
+$('#new_game').on('click', function(e){
   e.preventDefault();
   $.ajax({
-    Type:  "POST",
-    Url:  "/game/start/" + '<%= user.id %>',
-    Data:  "json"
+    type:  "POST",
+    url:  "/game/start/" + userId
   }).done(function (response){
   console.log(response);
 $("#waiting_players li").append('<li><a href="game/' + response.game_id + response.username + '>response.username</a></li>');
     });
-  )};
+  });
 });
+
 
 
   $('#board').on('click', 'td', function (e) {
@@ -27,3 +30,4 @@ $("#waiting_players li").append('<li><a href="game/' + response.game_id + respon
 
 
 });
+

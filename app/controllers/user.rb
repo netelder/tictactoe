@@ -4,8 +4,7 @@ post '/login' do
   erb :lobby
 end
 
-post '/logout' do
-
+get '/logout' do
+   session.clear
   redirect '/'
 end
-

@@ -5,11 +5,16 @@ get '/game/start/' do
 end
 
 post '/game/start/:user_id' do
+content_type :json
 #empty game board
-@user = User.find()
+puts "7" * 80
+puts params
+@user = User.find(params[:user_id])
 @game = Game.create
+@game.user_1 = @user
+p @game
 #pass the user into game user_1
-{username:  @user.username, game_id: @game.id}
+{username:  @user.username, game_id: @game.id}.to_json
 end
 
 
