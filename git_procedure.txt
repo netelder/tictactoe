@@ -7,7 +7,7 @@ git co -b <mybranch>
 edit/commit/edit/commit locally
 
 git co master
-git pull
+git pull origin master
 git co <mybranch>
 git rebase master
 
@@ -16,7 +16,7 @@ git rebase master
 
 git co master
 git merge <mybranch>
-git push
+git push origin master
 git co <mybranch>
 return to edit/commit locally and iterate
 
